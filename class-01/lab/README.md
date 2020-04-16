@@ -1,6 +1,7 @@
 # Lab: Class 1 - Intro to Python
 
 ## Overview
+
 Today you'll begin working on a command line utility which will mimic the functionality of a point of sale restaurant system using your basic Python tools and understanding of the basics of the language.
 
 ## Feature Tasks and Requirements
@@ -70,14 +71,6 @@ Unicorn Tears
 (ENV) $
 ```
 
-## Configuration
-
-Use `poetry` to create `snakes-cafe` project
-
-```sh
-$ poetry new snakes-cafe
-```
-
 ## Repository set-up
 
 - Create a repository with the exact name of `snakes-cafe`.
@@ -85,4 +78,4 @@ $ poetry new snakes-cafe
 
 ## Submission Instructions
 
-- Refer to the the [Lab Submission Instructions](../../../reference/submission-instructions/labs/){:target="_blank"} for the complete lab submission process and expectations
+- We'll go over submission steps in next class. Just have your github repository up to date.
