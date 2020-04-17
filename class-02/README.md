@@ -27,11 +27,10 @@ Today we learn about Test Driven Development with PyTest, and deepen our underst
 - [Python Containers and Looping]
 - [Fun with Python Strings]
 - [PyTest and Test-Driven Development]
-- [Poetry]
+- [Poetry](https://python-poetry.org/docs/#installation)
 
 <!-- links -->
 [Modules, Packages, Importing, and Namespaces]: ./notes/modules.md
 [Python Containers and Looping]: ./notes/containers.md
 [Fun with Python Strings]: ./notes/strings.md
 [PyTest and Test-Driven Development]: ./notes/pytest_tdd.md
-[Poetry]: (https://python-poetry.org/docs/#installation)
