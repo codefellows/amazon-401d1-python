@@ -14,12 +14,12 @@ Let's create the classic guessing game I Spy. We'll need...
 
 things = [
     {
-        "name": "clock",
+        "name": "billboard",
         "hints": [
             "bigger than a bread box",
             "rectangular",
-            "tells you something",
-            "changes frequently",
+            "changes over time",
+            "often wants to sell you something",
         ],
     },
     {
@@ -41,6 +41,9 @@ def guess_a_thing(riddle_index):
     guess = input("I spy with my little eye... ")
 
     while len(thing["hints"]):
+
+        if guess == "quit":
+            break
 
         if guess == thing["name"]:
             success = True

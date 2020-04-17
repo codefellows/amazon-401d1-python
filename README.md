@@ -8,4 +8,4 @@
 
 ## Resources
 
-- Optional: [Python Tutorial](https://www.learnpython.org/)
+- Optional: [Python Tutorial](https://www.learnpython.org/) Basics section.
