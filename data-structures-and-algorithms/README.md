@@ -1,6 +1,6 @@
-# Documentation of your solutions goes here
+# 401 Data Structures and Algorithms
 
-E.g.
+Documentation of your solutions goes here. E.g.
 
 ## Reverse an Array
 <!-- Short summary or background information -->
