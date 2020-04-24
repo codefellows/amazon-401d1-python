@@ -26,7 +26,3 @@ Will also handle exceptions as well as test that they are properly raised.
 - Handling exceptions
 - Raising exceptions
 - Testing exceptions
-
-## Today's Outline
-
-> Instructor to add. See facilitator guide for details.
