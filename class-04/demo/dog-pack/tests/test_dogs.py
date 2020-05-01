@@ -1,33 +1,41 @@
 import pytest
-from dog_pack import Puggle, Boxer
+from dog_pack.dog_pack import Puggle, Boxer, Mutt, Dog
+
+
+def test_dog_count():
+    a = Puggle()
+    b = Boxer()
+    assert Dog.count == 2
 
 
 def test_puggle():
     assert Puggle()
 
 
-def test_puggle_no_name():
-    pooch = Puggle()
-    actual = pooch.name
+def test_puggle_with_name():
+    lela = Puggle("Lela")
+    actual = lela.name
+    expected = "Lela"
+    assert actual == expected
+
+
+def test_puggle_with_unknown_name():
+    dunno = Puggle()
+    actual = dunno.name
     expected = "unknown"
     assert actual == expected
 
 
-def test_puggle_name():
-    puggle = Puggle("Marv")
-    actual = puggle.name
-    expected = "Marv"
+def test_puggle_greet():
+    lela = Puggle("Lela")
+    actual = lela.greet()
+    expected = "I am SO happy to see you!!!"
     assert actual == expected
 
 
-def test_puggle_greet(marv):
-    actual = marv.greet()
-    expected = "I am Marv. I am SO HAPPY to meet you!"
-    assert actual == expected
-
-
-def test_puggle_sleep(marv):
-    actual = marv.sleep()
+def test_puggle_sleep():
+    lela = Puggle("Lela")
+    actual = lela.sleep()
     expected = "zzz"
     assert actual == expected
 
@@ -36,62 +44,47 @@ def test_boxer():
     assert Boxer()
 
 
-def test_boxer_no_name():
-    pooch = Boxer()
-    actual = pooch.name
+def test_boxer_with_name():
+    marv = Boxer("Marv")
+    actual = marv.name
+    expected = "Marv"
+    assert actual == expected
+
+
+def test_puggle_with_unknown_name():
+    dunno = Boxer()
+    actual = dunno.name
     expected = "unknown"
     assert actual == expected
 
 
-def test_boxer_name(lela):
-    actual = lela.name
-    expected = "Lela"
+def test_boxer_greet():
+    marv = Boxer("Marv")
+    actual = marv.greet()
+    expected = "Howdy, how's it going?"
     assert actual == expected
 
 
-def test_boxer_greet(lela):
-    actual = lela.greet()
-    expected = "The name's Lela. Pleasure."
-    assert actual == expected
-
-
-def test_boxer_sleep(marv):
+def test_boxer_sleep():
+    marv = Boxer("Marv")
     actual = marv.sleep()
-    expected = "zzz"
+    expected = "snore"
     assert actual == expected
 
 
-def test_puggle_class_characteristics():
-    actual = Puggle.get_characteristics()
-    expected = "Like a mini boxer"
-    assert actual == expected
+def test_mutt_greet():
+    x = Mutt()
+    x.greet()
 
 
-def test_puggle_count():
-    actual = Puggle.get_breed_count()
-    expected = 0
-    assert actual == expected
-
-    Puggle("Marv")
-
-    actual = Puggle.get_breed_count()
-    expected = 1
-    assert actual == expected
+def test_dog_count():
+    Dog.count = 0  # assure known starting point
+    a = Puggle()
+    b = Boxer()
+    assert Dog.count == 2
 
 
-@pytest.fixture(autouse=True)
-def prep():
-    """Reset the Puggle count so it's fresh each test run
-    """
-    Puggle.count = 0
-
-
-@pytest.fixture
-def marv():
-    return Puggle("Marv")
-
-
-@pytest.fixture
-def lela():
-    return Boxer("Lela")
-
+def test_get_characteristics():
+    assert (
+        Puggle.get_characteristics() == "Mix of pug and beagle. Looks like a min boxer."
+    )
