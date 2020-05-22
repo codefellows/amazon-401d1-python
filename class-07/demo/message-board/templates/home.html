@@ -8,7 +8,12 @@
 </head>
 
 <body>
-  <h1>Home test</h1>
+  <h1>Posts</h1>
+  <ul>
+    {% for post in all_posts %}
+    <li>{{ post.text }}</li>
+    {% endfor %}
+  </ul>
 </body>
 
 </html>
